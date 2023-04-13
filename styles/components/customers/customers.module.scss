@@ -1,0 +1,145 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.customers {
+
+  .container {
+    @include container-flex(5.6rem);
+    flex-direction: column;
+
+    .headline {
+      @include flex-col-center(3.2rem);
+      width: 75%;
+      color: $black90;
+    }
+
+    .imageContent {
+      // Image condition
+      position: relative;
+      width: 85%;
+      height: 350px;
+      
+      .heroImg {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 7px 10px 15px rgba(0,0,0,0.1);
+      }
+      // ...Image condition
+    }
+    // imageContent
+  }
+  // container
+}
+// customers
+
+
+// @media screen and (max-width: 1900px) ..........................
+@include xxl {
+  .customers {
+    .container {
+      .headline {
+        width: 80%;
+      }
+
+      .imageContent {
+        height: 300px;
+      }
+    }
+    // container
+  }
+  // customers
+}
+// xxl
+
+
+// @media screen and (max-width: 1400px) ..........................
+@include xl {
+  .customers {
+    .container {
+      .headline {
+        width: 90%;
+      }
+
+      .imageContent {
+        width: 95%;
+        height: 280px;
+      }
+    }
+    // container
+  }
+  // customers
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ..........................
+@include lg {
+  .customers {
+    .container {
+      .headline {
+      }
+
+      .imageContent {
+        width: 100%;
+        height: 220px;
+      }
+    }
+    // container
+  }
+  // customers
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ..........................
+@include md {
+  .customers {
+    .container {
+      .headline {
+        width: 95%;
+        gap: 2.4rem;
+
+        .title {
+          font-size: var(--heading3);
+        }
+      }
+
+      .imageContent {
+        height: 160px;
+      }
+    }
+    // container
+  }
+  // customers
+}
+// md
+
+
+// @media screen and (max-width: 576px) ..........................
+@include sm {
+  .customers {
+    .container {
+      .headline {
+        width: 95%;
+      }
+
+      .imageContent {
+        height: 125px;
+      }
+    }
+    // container
+  }
+  // customers
+}
+// sm

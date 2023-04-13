@@ -1,0 +1,30 @@
+@use '../abstracts/type-scale' as *;
+
+@mixin disp0() {
+  font-size: var(--disp0);
+  font-weight: 400;
+}
+@mixin disp1() {
+  font-size: var(--disp1);
+  font-weight: 400;
+}
+@mixin disp2() {
+  font-size: var(--disp2);
+  font-weight: 400;
+}
+@mixin disp3() {
+  font-size: var(--disp3);
+  font-weight: 400;
+}
+@mixin disp4() {
+  font-size: var(--disp4);
+  font-weight: 400;
+}
+@mixin disp5() {
+  font-size: var(--disp5);
+  font-weight: 400;
+}
+@mixin disp6() {
+  font-size: var(--disp6);
+  font-weight: 400;
+}

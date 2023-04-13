@@ -1,0 +1,75 @@
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+@mixin btn-text {
+  background-color: #FAFAFA;
+  color: $primary-lts1;
+  font-size: $para-dsk-md;
+  font-weight: 700;
+  padding: 1.6rem 2.4rem;
+  transition: 0.3s;
+
+  &:hover {
+    color: $secondary-LTL2;
+  }
+}
+
+@mixin btn-filled-primary($hover-background-color: $primary-dark1) {
+  background-color: $primary;
+  color: $white2;
+  font-size: $para-dsk-md;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 1.6rem 2.4rem;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: $hover-background-color;
+  }
+}
+
+@mixin btn-outlined-primary($hover-color: $primary-dark1, $hover-border-color: $primary-dark1) {
+  background-color: transparent;
+  color: $primary;
+  font-size: $para-dsk-md;
+  font-weight: 700;
+  border: 2px solid $primary;
+  border-radius: 999px;
+  padding: 1.6rem 2.4rem;
+  transition: 0.4s;
+
+  &:hover {
+    color: $hover-color;
+    border-color: $hover-border-color;
+  }
+}
+
+@mixin btn-filled-secondary($hover-background-color: $secondary-dark1) {
+  background-color: $secondary;
+  color: $white2;
+  font-size: $para-dsk-md;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 1.6rem 2.4rem;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: $hover-background-color;
+  }
+}
+
+@mixin btn-outlined-secondary($hover-color: $secondary-dark1, $hover-border-color: $secondary-dark1) {
+  background-color: transparent;
+  color: $secondary;
+  font-size: $para-dsk-md;
+  font-weight: 700;
+  border: 2px solid $secondary;
+  border-radius: 999px;
+  padding: 1.6rem 2.4rem;
+    transition: 0.4s;
+
+  &:hover {
+    color: $hover-color;
+    border-color: $hover-border-color;
+  }
+}

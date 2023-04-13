@@ -1,0 +1,85 @@
+// abstracts
+@use 'abstracts/colors' as *;
+@use 'abstracts/type-scale' as *;
+
+// base
+@use 'base/base' as *;
+@use 'base/font-face' as *;
+@use 'base/section' as *;
+@use 'base/typography' as *;
+
+:root {
+  // Desktop paragraph font-size
+  --para-sm: #{$para-dsk-sm};
+  --para-md: #{$para-dsk-md};
+  --para-lg: #{$para-dsk-lg};
+
+  // Desktop heading font-size
+  --heading1: #{$h1-dsk};
+  --heading2: #{$h2-dsk};
+  --heading3: #{$h3-dsk};
+  --heading4: #{$h4-dsk};
+  --heading5: #{$h5-dsk};
+  --heading6: #{$h6-dsk};
+
+  // Desktop display font-size
+  --disp0: #{$d0-dsk};
+  --disp1: #{$d1-dsk};
+  --disp2: #{$d2-dsk};
+  --disp3: #{$d3-dsk};
+  --disp4: #{$d4-dsk};
+  --disp5: #{$d5-dsk};
+  --disp6: #{$d6-dsk};
+
+
+  // Tablet
+  @media screen and (max-width: 1024px) {
+
+    // Tablet paragraph font-size
+    --para-sm: #{$para-tab-sm};
+    --para-md: #{$para-tab-md};
+    --para-lg: #{$para-tab-lg};
+
+    // Tablet heading font-size
+    --heading1: #{$h1-tab};
+    --heading2: #{$h2-tab};
+    --heading3: #{$h3-tab};
+    --heading4: #{$h4-tab};
+    --heading5: #{$h5-tab};
+    --heading6: #{$h6-tab};
+    
+    // Tablet display font-size
+    --disp1: #{$d1-tab};
+    --disp2: #{$d2-tab};
+    --disp3: #{$d3-tab};
+    --disp4: #{$d4-tab};
+    --disp5: #{$d5-tab};
+    --disp6: #{$d6-tab};
+  }
+
+
+  // Mobile
+  @media screen and (max-width: 576px) {
+
+    // Mobile paragraph font-size
+    --para-sm: #{$para-mob-sm};
+    --para-md: #{$para-mob-md};
+    --para-lg: #{$para-mob-lg};
+
+    // Mobile heading font-size
+    --heading1: #{$h1-mob};
+    --heading2: #{$h2-mob};
+    --heading3: #{$h3-mob};
+    --heading4: #{$h4-mob};
+    --heading5: #{$h5-mob};
+    --heading6: #{$h6-mob};
+    
+    // Mobile display font-size
+    --disp1: #{$d1-mob};
+    --disp2: #{$d2-mob};
+    --disp3: #{$d3-mob};
+    --disp4: #{$d4-mob};
+    --disp5: #{$d5-mob};
+    --disp6: #{$d6-mob};
+  }
+}

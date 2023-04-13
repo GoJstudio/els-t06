@@ -1,0 +1,136 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menus' as *;
+
+.faqs {
+  padding-top: 0;
+
+  hr {
+    @include horiz-line;
+    width: 83.3%;
+  }
+
+  .container {    
+    @include container-flex(5.6rem);
+    flex-direction: column;
+    
+    .headline {
+      @include flex-col-center(3.2rem);
+      width: 75%;
+      color: $black90;
+    }
+    
+    .faqsContainer {
+      @include flex-col-center(2.4rem);
+      width: 65%;
+    }
+  }
+  // container
+}
+// faqs
+
+
+// @media screen and (max-width: 1900px) ..........................
+@include xxl {
+  .faqs {
+    .container {
+      .headline {
+        width: 80%;
+      }
+
+      .faqsContainer {
+        width: 70%;
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// xxl
+
+
+// @media screen and (max-width: 1400px) ..........................
+@include xl {
+  .faqs {
+    .container {
+      .headline {
+        width: 90%;
+      }
+
+      .faqsContainer {
+        width: 75%;
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ..........................
+@include lg {
+  .faqs {
+    .container {
+      .headline {
+      }
+
+      .faqsContainer {
+        width: 80%;
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ..........................
+@include md {
+  .faqs {
+    .container {
+      .headline {
+        width: 95%;
+        gap: 2.4rem;
+
+        .title {
+          font-size: var(--heading3);
+        }
+      }
+
+      .faqsContainer {
+        width: 85%;
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// md
+
+
+// @media screen and (max-width: 576px) ..........................
+@include sm {
+  .faqs {
+    .container {
+      .headline {
+        width: 100%;
+      }
+
+      .faqsContainer {
+        width: 90%;
+      }
+    }
+    // container
+  }
+  // faqs
+}
+// md

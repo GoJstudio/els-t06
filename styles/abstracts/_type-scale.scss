@@ -1,0 +1,123 @@
+@use 'sass:math';
+
+// 전체 기준.......................................
+// 고정값
+// 10px = 62.5%이다. base_base에서 html {font-size: 62.5%}로 설정함
+$browser-fs-px: 10;
+$rem-unit: 1rem;
+
+
+// Desktop - dsk..........................................
+// dsk 기준값
+$type-scale-dsk: 1.200;
+$html-fs-px-dsk: 16;
+
+// Desktop base font-size rem: 현재값 16px/10px = 1.6rem
+$fs-base-rem-dsk: math.div($html-fs-px-dsk, $browser-fs-px) * $rem-unit;
+
+// small-sm, medium-md, large-lg
+// paragraph desktop, font-size만 변화, 변수로 적용한다.
+// 1.6rem / 1.200 = 1.3333
+$para-dsk-sm: math.div($fs-base-rem-dsk, $type-scale-dsk);
+$para-dsk-md: $fs-base-rem-dsk;
+// 1rem * 1.200 = 1.92
+$para-dsk-lg: $fs-base-rem-dsk * $type-scale-dsk;
+
+// heading desktop, 태그에서 font-weight(700)과 함께 적용된다.
+// $increment: 1;
+$h-start-dsk: 1;
+$d-start-dsk: 4;
+$h1-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $h-start-dsk + 5);
+$h2-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $h-start-dsk + 4);
+$h3-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $h-start-dsk + 3);
+$h4-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $h-start-dsk + 2);
+$h5-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $h-start-dsk + 1);
+$h6-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $h-start-dsk);
+
+// display desktop, font-size만 변화, 변수로 적용한다.
+$d0-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $d-start-dsk + 6);
+$d1-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $d-start-dsk + 5);
+$d2-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $d-start-dsk + 4);
+$d3-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $d-start-dsk + 3);
+$d4-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $d-start-dsk + 2);
+$d5-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $d-start-dsk + 1);
+$d6-dsk: $fs-base-rem-dsk * math.pow($type-scale-dsk, $d-start-dsk);
+
+
+
+// Tablet - tab..........................................
+// tab 기준값
+$type-scale-tab: 1.200;
+$html-fs-px-tab: 14;
+
+// Tablet base font-size rem: 현재값 14px/10px = 1.4rem
+$fs-base-rem-tab: math.div($html-fs-px-tab, $browser-fs-px) * $rem-unit;
+
+// small-sm, medium-md, large-lg
+// paragraph tablet, font-size만 변화, 변수로 적용한다.
+// 1.4rem / 1.200 = 1.16667
+$para-tab-sm: math.div($fs-base-rem-tab, $type-scale-tab);
+$para-tab-md: $fs-base-rem-tab;
+// 1.4rem * 1.200 = 1.6.8
+$para-tab-lg: $fs-base-rem-tab * $type-scale-tab;
+
+// heading tablet, 태그에서 font-weight(700)과 함께 적용된다.
+// $increment: 1;
+$h-start-tab: 1;
+$d-start-tab: 4;
+// 1.4 * 1.2^6 = 2.985984 = 4.18038
+$h1-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $h-start-tab + 5);
+$h2-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $h-start-tab + 4);
+$h3-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $h-start-tab + 3);
+$h4-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $h-start-tab + 2);
+$h5-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $h-start-tab + 1);
+$h6-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $h-start-tab);
+
+// display tablet, font-size만 변화, 변수로 적용한다.
+$d1-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $d-start-tab + 5);
+$d2-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $d-start-tab + 4);
+$d3-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $d-start-tab + 3);
+$d4-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $d-start-tab + 2);
+$d5-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $d-start-tab + 1);
+$d6-tab: $fs-base-rem-tab * math.pow($type-scale-tab, $d-start-tab);
+
+
+
+// Mobile - mob..........................................
+// mob 기준값
+$type-scale-mob: 1.125;
+$html-fs-px-mob: 14;
+
+// Tablet base font-size rem: 현재값 14px/10px = 1.4rem
+$fs-base-rem-mob: math.div($html-fs-px-mob, $browser-fs-px) * $rem-unit;
+
+// small-sm, medium-md, large-lg
+// paragraph tablet, font-size만 변화, 변수로 적용한다.
+// 1.4rem / 1.200 = 1.16667
+$para-mob-sm: math.div($fs-base-rem-mob, $type-scale-mob);
+$para-mob-md: $fs-base-rem-mob;
+// 1.4rem * 1.200 = 1.6.8
+$para-mob-lg: $fs-base-rem-mob * $type-scale-mob;
+
+// heading tablet, 태그에서 font-weight(700)과 함께 적용된다.
+// $increment: 1;
+$h-start-mob: 1;
+$d-start-mob: 4;
+// 1.4 * 1.2^6 = 2.985984 = 4.18038
+$h1-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $h-start-mob + 5);
+$h2-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $h-start-mob + 4);
+$h3-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $h-start-mob + 3);
+$h4-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $h-start-mob + 2);
+$h5-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $h-start-mob + 1);
+$h6-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $h-start-mob);
+
+// display tablet, font-size만 변화, 변수로 적용한다.
+$d1-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $d-start-mob + 5);
+$d2-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $d-start-mob + 4);
+$d3-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $d-start-mob + 3);
+$d4-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $d-start-mob + 2);
+$d5-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $d-start-mob + 1);
+$d6-mob: $fs-base-rem-mob * math.pow($type-scale-mob, $d-start-mob);
+
+
+

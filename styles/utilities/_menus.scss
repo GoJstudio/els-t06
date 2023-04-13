@@ -1,0 +1,53 @@
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+@mixin menu-default() {
+  cursor: pointer;
+  color: $primary;
+  padding: 8px 16px;
+  transition: 0.4s;
+
+  &:hover {
+    color: $primary-LTL1;
+  }
+}
+
+@mixin menu-underlined() {
+  @include menu-default;
+  position: relative;
+  
+  &::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    width: 0;
+    height: 100%;
+    // display: inline-block; a태그에서는 사용
+    border-bottom: 4px solid $primary-LTL1;
+    // transition: 0.4s ease-out;
+  }
+
+  &:hover {
+    color: $primary-LTL1;
+
+    &::after {
+      left: 10%;
+      width: 80%;
+    }
+  }
+  
+}
+
+@mixin menu-filled() {
+  @include menu-default;
+  background-color: $primary;
+  color: $white2;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $primary-dark50;
+    // menu-default에 의해서 hover 내용도 전달됨
+    color: $white2; 
+  }
+}

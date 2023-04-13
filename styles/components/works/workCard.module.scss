@@ -1,0 +1,168 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menus' as *;
+
+.workCard {
+  @include flex-col-center;
+  // width: 100%;
+  justify-content: flex-start;
+  background-color: $primary;
+  border-radius: 8px;
+  padding-bottom: 16px;
+
+  .imageWrapper {
+    // Image condition
+    position: relative;
+    width: 100%;
+    height: 200px;
+    
+    .img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+    // ...Image condition
+  }
+  // imageWrapper
+  
+  .cardText {
+    color: $white2;
+    padding: 0 24px;
+    margin-top: 32px;
+
+    .title {
+      margin: 16px 0;
+    }
+
+    .btnWrapper {
+      display: flex;
+      justify-content: flex-end;
+      
+      .btnIcon {
+        @include btn-text;
+        color: $primary-lts2;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-top: 0.8rem;
+      }
+    }
+  }
+  // textContent
+}
+
+
+// @media screen and (max-width: 1800px) ......................
+@include xxl {
+  .workCard {
+    .imageWrapper {
+      height: 180px;
+    }
+    // imageWrapper
+
+    .cardText {
+    }
+    // cardText
+  }
+  // workCard
+}
+// xxl
+
+
+// @media screen and (max-width: 1400px) ......................
+@include xl {
+  .workCard {
+    
+    .imageWrapper {
+      height: 150px;
+    }
+    // imageWrapper
+
+    .cardText {
+      margin-top: 24px;
+
+      .title {
+        font-size: var(--heading5);
+        margin: 12px 0;
+      }
+    }
+    // cardText
+  }
+  // workCard
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ......................
+@include lg {
+  .workCard {
+    width: 75%;
+    .imageWrapper {
+    }
+    // imageWrapper
+
+    .cardText {
+      .btnWrapper {  
+        .btnIcon {
+          padding: 0.8rem 1.6rem 1.6rem;
+        }
+      }
+    }
+    // cardText
+  }
+  // workCard
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ............................
+@include md {
+  .workCard {
+    width: 85%;  
+    .imageWrapper {
+    }
+    // imageWrapper
+
+    .cardText {
+      .btnWrapper {  
+        .btnIcon {
+          padding: 0.8rem 0.8rem 1.6rem;
+        }
+      }      
+    }
+    // cardText
+  }
+  // workCard
+}
+// md
+
+
+// @media screen and (max-width: 576px) ............................
+@include sm {
+  .workCard {
+    width: 90%;
+    
+    .imageWrapper {
+      .img {
+      }
+    }
+    // imageWrapper
+
+    .cardText {
+      .title {
+      }
+    }
+    // cardText
+  }
+  // workCard
+}
+// sm

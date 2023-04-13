@@ -1,0 +1,226 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.products {  
+  .container {
+    @include container-flex;
+
+    .textContent {
+      @include flex-col-center(3.2rem);
+      max-width: 55%;
+      color: $gray60;
+      align-items: normal;
+
+      .display {
+        @include disp5;
+        color: $black90;
+      }
+
+      .desc {
+        white-space: pre-line;
+      }
+
+      .btnWrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 4.8rem;
+
+        .btnIcon {
+          @include btn-text;
+          color: $primary-lts1;
+          @include flex-row-center(0.8rem);
+          padding: 0;
+        }
+      }
+    }
+    // textContent
+
+    .imageContent {
+      // Image condition
+      position: relative;
+      width: 40%;
+      height: 400px;
+      
+      .img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 7px 10px 15px rgba(0,0,0,0.5);
+      }
+      // ...Image condition
+    }
+    // imageContent
+  }
+  // container
+}
+// products
+
+
+
+// @media screen and (max-width: 18000px) ..........................
+@include xxl {
+  .products {  
+    .container {
+      .textContent {
+        max-width: 50%;
+      }
+
+      .imageContent {
+        width: 45%;
+        height: 400px;
+      }
+    }
+    // container
+  }
+  // products
+}
+// xxl
+
+
+// @media screen and (max-width: 14000px) ..........................
+@include xl {
+  .products {  
+    .container {
+      .textContent {
+        max-width: 50%;
+        gap: 2.4rem;
+
+        .title {
+          font-size: var(--heading5);
+        }
+
+        .display {
+          font-size: var(--disp6);
+        }
+      }
+
+      .imageContent {
+        width: 45%;
+        height: 410px;
+      }
+    }
+    // container
+  }
+  // products
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ............................
+@include lg {
+  .products {
+    .container {
+      flex-direction: column;
+      gap: 32px;
+
+      .textContent {
+        max-width: 95%;
+        gap:1.6rem;
+
+        .title {
+          font-size: var(--heading5);
+        }
+
+        .display {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .desc {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+
+      .imageContent {
+        width: 95%;
+      }
+    }
+    // container
+  }
+  // products
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ............................
+@include md {
+  .products {    
+    .container {
+      width: 100%;
+
+      .textContent {
+        max-width: 75%;
+        gap: 1.6rem;
+
+        .display {
+          white-space: normal;
+          // 자간의 2배로 2줄 높이로 제한
+          line-height: 1.2;
+          height: 2.4em;
+        }
+
+        .desc {
+          display: none;
+        }
+      }
+
+      .imageContent {
+        width: 85%;
+      }
+    }
+    // container
+  }
+  // products
+}
+// md
+
+
+// @media screen and (max-width: 576px) ............................
+@include sm {
+  .products {
+    .container {
+      .textContent {
+        max-width: 80%;
+        text-align: center;
+      }
+
+      .imageContent {
+      }
+    }
+    // container
+  }
+  // products
+}
+// sm
+
+
+// @media screen and (max-width: 450px) ............................
+@include xs {
+  .products {
+    .container {
+      .textContent {
+        max-width: 90%;
+      }
+
+      .imageContent {
+      }
+    }
+    // container
+  }
+  // products
+}
+// xs

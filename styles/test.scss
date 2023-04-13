@@ -1,0 +1,90 @@
+// abstracts
+@use 'abstracts/colors' as *;
+@use 'abstracts/type-scale' as *;
+
+// base
+@use 'base/base' as *;
+@use 'base/font-face' as *;
+@use 'base/typography' as *;
+
+
+
+:root {
+  // Desktop paragraph font-size
+  --para-sm: #{$para-dsk-sm};
+  --para-md: #{$para-dsk-md};
+  --para-lg: #{$para-dsk-lg};
+
+  // Desktop heading font-size
+  --heading1: #{$h1-dsk};
+  --heading2: #{$h2-dsk};
+  --heading3: #{$h3-dsk};
+  --heading4: #{$h4-dsk};
+  --heading5: #{$h5-dsk};
+  --heading6: #{$h6-dsk};
+
+  // Desktop display font-size
+  --disp0: #{$d0-dsk};
+  --disp1: #{$d1-dsk};
+  --disp2: #{$d2-dsk};
+  --disp3: #{$d3-dsk};
+  --disp4: #{$d4-dsk};
+  --disp5: #{$d5-dsk};
+  --disp6: #{$d6-dsk};
+
+
+  // Tablet
+  @media screen and (max-width: 1440px) {
+
+    // Desktop paragraph font-size
+    --para-sm: #{$para-tab-sm};
+    --para-md: #{$para-tab-md};
+    --para-lg: #{$para-tab-lg};
+
+    // Tablet heading font-size
+    --heading1: #{$h1-tab};
+    --heading2: #{$h2-tab};
+    --heading3: #{$h3-tab};
+    --heading4: #{$h4-tab};
+    --heading5: #{$h5-tab};
+    --heading6: #{$h6-tab};
+    
+    // Tablet display font-size
+    --disp1: #{$d1-tab};
+    --disp2: #{$d2-tab};
+    --disp3: #{$d3-tab};
+    --disp4: #{$d4-tab};
+    --disp5: #{$d5-tab};
+    --disp6: #{$d6-tab};
+  }
+}
+
+// base
+
+.navbar {
+  
+  .navlist {
+    display: flex;
+
+    .navmenu {
+      color: $primary;
+      font-size: $h6-dsk;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 0 8px;
+      padding: 8px 16px;
+
+      border: 1px solid black;
+
+      &:hover {
+        color: $primary-dark1;
+      }
+    }
+  }
+}
+
+.featureCard {
+  p {
+    font-size: $para-dsk-sm;
+  }
+}

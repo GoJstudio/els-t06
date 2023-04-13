@@ -1,0 +1,119 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.header {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  background-color: $primary;
+  background-color: $black90;
+  background-color: $white2;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  padding: 8px;
+
+  .container {  
+    @include container-flex(0px);
+
+    .menuContents {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .menuContact {
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        margin-right: 16px;
+
+        .email {
+          color: $primary;
+          font-weight: 400;
+          transition: 0.4s;
+
+          &:hover {
+            color: $primary-LTL1;
+          }
+        }
+      }
+      // menuContact
+    }
+    // menuContents
+    
+    .menuBars {
+      display: none;
+    }  
+  }
+  // container
+}
+// header
+
+
+// @media screen and (max-width: 1024px) ..........................
+@include lg {
+  .header {  
+    .container {
+      .menuContents {  
+        .menuContact {
+        }
+      }
+
+      .menuBars {
+        color: $primary;
+        display: block;
+        font-size: 3.2rem;
+      }
+    }
+    // container
+  }
+  // header
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ..........................
+@include md {
+  .header {  
+    .container {      
+      .menuContents {  
+        .menuContact {
+          display: none;  
+        }
+      }
+
+      .menuBars {
+      }
+    }
+    // container
+  }
+  // header
+}
+// md
+
+
+// @media screen and (max-width: 576px) ............................
+@include sm {
+  .header {  
+    .container {    
+      .menuContents {  
+        .menuContact {
+        }
+      }
+
+      .menuBars {
+        font-size: 2.4rem;
+      }
+    }
+    // container
+  }
+  // header
+}
+// sm

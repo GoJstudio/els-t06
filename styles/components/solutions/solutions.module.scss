@@ -1,0 +1,175 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.solutions {
+  background-color: $primary;
+  color: $white2;
+
+  .container {
+    @include container-flex(5.6rem);
+    flex-direction: column;
+
+    .headline {
+      display: flex;
+      justify-content: space-between;
+      
+      .title {
+        width: 45%;
+        white-space: nowrap;
+      }
+      
+      .desc {
+        width: 55%;
+      }
+    }
+
+    .cardContents {
+      @include container-grid($repeatNum:3, $frNum:1fr, $grid-gap: 9.6rem);
+      justify-items: center;
+      width: 95%;
+    }
+  }
+  // container
+}
+
+
+// @media screen and (max-width: 1800px) ............................
+@include xxl {
+  .solutions {
+    .container {
+      .headline {        
+        .title {
+          width: 50%;
+        }
+
+        .desc {
+          width: 50%;
+        }
+    }
+    // headline
+
+      .cardContents {
+        grid-gap: 7.2em;
+      }
+    }
+    // container
+  }
+  // solutions
+}
+
+
+// @media screen and (max-width: 1400px) ............................
+@include xl {
+  .solutions {
+    .container {
+      .headline {
+        width: 90%;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        .title {
+          width: auto;
+        }
+
+        .desc {
+          width: auto;
+        }
+      }
+      // headline
+
+      .cardContents {
+      }
+    }
+    // container
+  }
+  // solutions
+}
+
+
+// @media screen and (max-width: 1024px) ..........................
+@include xl {
+  .solutions {
+    .container {
+      .headline {
+      }
+      // headline
+
+      .cardContents {
+      }
+    }
+    // container
+  }
+  // solutions
+}
+
+
+// @media screen and (max-width: 768px) ............................
+@include md {
+  .solutions {  
+    .container {
+      .headline {
+        gap: 2.4rem;
+      }
+
+      .cardContents {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 6.4rem;
+      }
+    }
+    // container
+  }
+  // solutions
+}
+
+
+// @media screen and (max-width: 576px) ............................
+@include sm {
+  .solutions {  
+    .container {
+      .headline {
+        align-items: center;
+
+        .desc {
+          text-align: center;
+        }
+      }
+
+      .cardContents {
+      }
+    }
+    // container
+  }
+  // solutions
+}
+
+
+// @media screen and (max-width: 450px) ............................
+@include xs {
+  .solutions {  
+    .container {
+      .headline {
+        width: 95%;
+        
+        .title {
+          white-space: normal;
+          font-size: var(--heading3);
+        }
+      }
+      
+      .cardContents {
+        grid-gap: 5.6rem;
+      }
+    }
+    // container
+  }
+  // solutions
+}
+// xs

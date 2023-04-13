@@ -1,0 +1,105 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/menus' as *;
+
+.faqAccordion {
+  width: 100%;
+  border: 1px solid $gray40;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .headline {
+    @include flex-row-center(24px);
+    width: 100%;
+    justify-content: space-between;
+
+    .question {
+      font-weight: 400;
+    }
+
+    .icon {
+      width: 5.6rem;
+      text-align: right;
+
+      .arrow {
+        color: $primary;
+        font-size: 4rem;
+        transition: all 0.2s ease-out;
+  
+        &.up {
+          transform: rotate(180deg);
+        }
+      }
+      // arrow
+    }
+    // icon
+  }
+  // headline
+
+  .desc {
+    width: 90%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 3s cubic-bezier(0, 1, 0, 1);
+
+    &.open {
+      max-height: 9999px;
+      transition: max-height 3s ease-in-out;
+    }
+
+    hr {
+      margin: 16px 0;
+    }
+
+    .answer {
+      white-space: pre-line;
+      line-height: 1.5;
+      padding-left: 16px;
+    }
+  }
+  // desc
+}
+// faqAccordion
+
+
+// @media screen and (max-width: 1900px) ..........................
+@include xxl {
+}
+// xxl
+
+// @media screen and (max-width: 768px) ..........................
+@include md {
+}
+// md
+
+// @media screen and (max-width: 576px) ..........................
+@include sm {
+  .faqAccordion {
+    .headline {
+      .icon {
+        width: 4.8rem;
+        text-align: right;
+
+        .arrow {
+          color: $primary;
+          font-size: 3.2rem;
+          transition: all 0.2s ease-out;
+        }
+        // arrow
+      }
+      // icon
+    }
+    // headline
+  }
+}
+// sm

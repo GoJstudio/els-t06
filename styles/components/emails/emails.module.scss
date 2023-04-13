@@ -1,0 +1,184 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.emails {
+  background-color: $primary;
+  padding: 6.4rem 0;
+
+  .container {
+    @include container-flex(5.6rem);
+    flex-direction: column;
+
+    .headline {
+      @include flex-col-center(2.4rem);
+      width: 75%;
+      color: $white2;
+
+      .desc {
+        text-align: center;
+      }
+    }
+    // headline
+
+    .signup {
+      @include flex-row-center;
+      width: 40%;
+
+      input {
+        height: 5.6rem;
+        width: 80%;
+        font-size: var(--para-md);
+        border: 0;
+        border-radius: 8px;
+        margin-right: 16px;
+        padding: 0 16px;   
+      }
+      
+      button {
+        @include flex-row-center;
+        width: 5.6rem;
+        height: 5.6rem;
+        color: $white2;
+        background-color: $secondary-LTL1;
+        font-size: 24px;
+        border-radius: 8px;
+      }
+    }
+    // signup
+  }
+  // container
+}
+// emails
+
+
+// @media screen and (max-width: 1900px) ..........................
+@include xxl {
+  .emails {
+    .container {
+      .headline {
+        width: 80%;
+      }
+      // headline
+  
+      .signup {
+        width: 50%;
+      }
+      // signup
+    }
+    // container
+  }
+  // emails
+}
+// xxl
+
+
+// @media screen and (max-width: 1400px) ..........................
+@include xl {
+  .emails {
+    .container {
+      .headline {
+        width: 90%;
+      }
+      // headline
+  
+      .signup {
+        width: 60%;
+      }
+      // signup
+    }
+    // container
+  }
+  // emails
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ..........................
+@include lg {
+  .emails {
+    .container {  
+      .headline {  
+      }
+      // headline
+  
+      .signup {
+        width: 70%;
+  
+        input {
+          height: 4.8rem;
+        }        
+        button {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+      }
+      // signup
+    }
+    // container
+  }
+  // emails
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ..........................
+@include md {
+  .emails {
+    .container {  
+      .headline {  
+        width: 95%;
+      }
+      // headline
+  
+      .signup {
+        width: 80%;
+      }
+      // signup
+    }
+    // container
+  }
+  // emails
+}
+// md
+
+
+// @media screen and (max-width: 576px) ..........................
+@include sm {
+  .emails {
+    .container {  
+      .headline {  
+        width: 100%;
+
+        .title {
+          font-size: var(--heading3);
+        }
+      }
+      // headline
+  
+      .signup {
+        width: 90%;
+  
+        input {
+          height: 4.0rem;
+        }        
+        button {
+          width: 4.0rem;
+          height: 4.0rem;
+        }
+      }
+      // signup
+    }
+    // container
+  }
+  // emails
+}
+// sm

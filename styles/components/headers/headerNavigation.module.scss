@@ -1,0 +1,149 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/menus' as *;
+
+.navbar {  
+  .navlist {
+    display: flex;
+    gap: 4.0rem;
+    
+    .navmenu {
+      @include menu-underlined;
+      color: $white2;
+      color: $primary;
+      text-transform: uppercase;
+      font-weight: 400;
+
+      a {
+        font-weight: 400;
+      }
+
+      .sublist {
+        // z-index: -10;
+        position: absolute;
+        top: 100%; left: 10%;
+        width: 220px;
+        background-color: #aaa;
+        padding: 8px 16px;
+        display: none;
+
+        &.open {
+          display: block;
+        }
+
+        .submenu {
+          padding: 8px 16px;
+          background-color: #eee;
+        }
+      }
+      // sublist
+    }
+    // navmenu
+  }
+  // navlist
+}
+// navbar
+
+
+// @media screen and (max-width: 1800px) ............................
+@include xxl {
+  .navbar {  
+    .navlist {
+      gap: 2.4rem;
+      
+      .navmenu {
+        @include menu-underlined;
+        color: $white2;
+        color: $primary;
+        text-transform: uppercase;
+        font-weight: 400;
+  
+        a {
+          font-weight: 400;
+        }
+  
+        .sublist {
+          // z-index: -10;
+          position: absolute;
+          top: 100%; left: 10%;
+          width: 220px;
+          background-color: #aaa;
+          padding: 8px 16px;
+          display: none;
+  
+          &.open {
+            display: block;
+          }
+  
+          .submenu {
+            padding: 8px 16px;
+            background-color: #eee;
+          }
+        }
+        // sublist
+      }
+      // navmenu
+    }
+    // navlist
+  }
+  // navbar
+}
+// xxl
+
+
+// @media screen and (max-width: 1400px) ............................
+@include xl {
+  .navbar {  
+    .navlist {
+      gap: 0;
+      
+      .navmenu {
+        @include menu-underlined;
+        color: $white2;
+        color: $primary;
+        text-transform: uppercase;
+        font-weight: 400;
+  
+        a {
+          font-weight: 400;
+        }
+  
+        .sublist {
+          // z-index: -10;
+          position: absolute;
+          top: 100%; left: 10%;
+          width: 220px;
+          background-color: #aaa;
+          padding: 8px 16px;
+          display: none;
+  
+          &.open {
+            display: block;
+          }
+  
+          .submenu {
+            padding: 8px 16px;
+            background-color: #eee;
+          }
+        }
+        // sublist
+      }
+      // navmenu
+    }
+    // navlist
+  }
+  // navbar
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ............................
+@include lg {
+  .navbar {
+    display: none;
+  }
+}

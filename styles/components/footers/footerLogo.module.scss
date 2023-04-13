@@ -1,0 +1,50 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.logo {
+  .link {
+    @include flex-col-center(0.4rem);
+    color: $white2;
+    transition: 0.4s;
+  
+    .name {
+      @include disp4;
+      letter-spacing: 0.2rem;
+    }
+  
+    .slogan {
+      font-weight: 400;
+      letter-spacing: 0.15rem;
+    }
+    
+    .initial {
+      display: flex;
+      line-height: 100%;
+      letter-spacing: 0.05rem;
+      
+      p {
+        font-size: var(--para-sm);
+        margin-right: 0.8rem;
+        
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+  
+    &:hover {
+      color: $secondary-LTL1;
+    }
+  }
+  // link
+}
+// logo

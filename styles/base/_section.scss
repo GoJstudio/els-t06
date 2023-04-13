@@ -1,0 +1,29 @@
+section {
+  padding: 9.6rem 0;
+}
+
+// lg 
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 7.2rem 0;
+  }
+}
+
+// md 
+@media screen and (max-width: 768px) {
+  section {
+    padding: 5.6rem 0;
+  }
+}
+
+// sm
+@media screen and (max-width: 576px) {
+  section {
+  }
+}
+
+// xs
+@media screen and (max-width: 450px) {
+  section {
+  }
+}

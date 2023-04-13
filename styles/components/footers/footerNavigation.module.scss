@@ -1,0 +1,75 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.navigation {
+  @include flex-col-center(16px);
+  align-items: flex-start;
+
+  &:last-child {
+    display: none;
+  }
+
+  .menu {
+    font-weight: 500;
+  }
+
+  .list {
+    @include flex-col-center(8px);
+    align-items: flex-start;
+
+    .item {
+      transition: 0.4s;
+
+      a {
+        font-size: var(--para-sm);
+      }
+
+      &:hover {
+        color: $primary-LTL1;
+      }
+    }
+  }
+  // list
+}
+// navigation
+
+
+// @media screen and (max-width: 768px) ..........................
+@include md {        
+    .navigation {
+      &:nth-child(3) {
+        display: none;
+      }
+
+      &:nth-child(4) {
+        display: none;
+      }
+
+      &:last-child {
+        display: flex;
+      }
+
+      .menu {
+      }  
+      .list {  
+        .item {
+          a {
+          }
+          &:hover {
+          }
+        }
+      }
+      // list
+    }
+    // navigation
+}
+// md

@@ -1,0 +1,190 @@
+// abstracts
+@use '@/styles/abstracts/colors' as *;
+@use '@/styles/abstracts/type-scale' as *;
+
+// utilities
+@use '@/styles/utilities/breakpoints' as *;
+@use '@/styles/utilities/buttons' as *;
+@use '@/styles/utilities/container' as *;
+@use '@/styles/utilities/flex' as *;
+@use '@/styles/utilities/font-utils' as *;
+@use '@/styles/utilities/menus' as *;
+
+.footer {
+  background-color: $black90;
+  color: $gray20;
+  padding: 48px 0 24px;
+
+  .container {
+    @include container-flex(2.4rem);
+    flex-direction: column;
+
+    .upperContents {
+      @include container-flex;
+      width: 70%;
+
+      .leftContents{
+        @include flex-col-center(2.4rem);
+        justify-content: space-between;
+      }
+      // leftContents
+  
+      .rightContents {
+        @include container-grid(4, 1fr, 0);
+        width: 70%;
+        justify-items: flex-end;
+        margin: 0;
+        
+      }
+      // rightContents
+    }
+    // upperContents
+
+    .lowerContents {
+    }
+  }
+  // container
+}
+// footer
+
+
+// @media screen and (max-width: 1800px) ..........................
+@include xxl {
+  .footer {  
+    .container {  
+      .upperContents {
+        width: 80%;
+        .leftContents{
+        }
+        // leftContents
+    
+        .rightContents {
+        }
+        // rightContents
+      }
+      // upperContents
+  
+      .lowerContents {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// xxl
+
+
+// @media screen and (max-width: 1400px) ..........................
+@include xl {
+  .footer {
+    .container {  
+      .upperContents {
+        width: 90%;
+
+        .leftContents{
+        }
+        // leftContents
+    
+        .rightContents {
+          width: 65%;
+        }
+        // rightContents
+      }
+      // upperContents
+  
+      .lowerContents {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// xl
+
+
+// @media screen and (max-width: 1024px) ..........................
+@include lg {
+  .footer {
+    .container {  
+      .upperContents {
+        width: 95%;
+
+        .leftContents{    
+        }
+        // leftContents
+    
+        .rightContents {
+          width: 65%;
+        }
+        // rightContents
+      }
+      // upperContents
+  
+      .lowerContents {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// lg
+
+
+// @media screen and (max-width: 768px) ..........................
+@include md {
+  .footer {
+    .container {  
+      .upperContents {
+        width: 95%;
+
+        .leftContents{  
+          width: 65%;
+        }
+        // leftContents
+    
+        .rightContents {
+          @include container-grid(3, 1fr, 0);
+        }
+        // rightContents
+      }
+      // upperContents
+  
+      .lowerContents {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// md
+
+
+// @media screen and (max-width: 576px) ..........................
+@include sm {
+  .footer {
+    .container {  
+      .upperContents {
+        width: 90%;
+        flex-direction: column-reverse;
+        gap: 3.2rem;
+
+        .leftContents{  
+          width: 60%;
+        }
+        // leftContents
+    
+        .rightContents {
+          justify-items: center;
+        }
+        // rightContents
+      }
+      // upperContents
+  
+      .lowerContents {
+      }
+    }
+    // container
+  }
+  // footer
+}
+// sm

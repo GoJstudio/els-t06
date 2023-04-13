@@ -13,31 +13,32 @@
     
     .navmenu {
       @include menu-underlined;
-      color: $white2;
       color: $primary;
       text-transform: uppercase;
       font-weight: 400;
+      // background-color: #999;
 
       a {
         font-weight: 400;
       }
 
       .sublist {
-        // z-index: -10;
+        z-index: 10;
         position: absolute;
         top: 100%; left: 10%;
         width: 220px;
-        background-color: #aaa;
+        background-color: $white2;
         padding: 8px 16px;
-        display: none;
-
-        &.open {
-          display: block;
-        }
 
         .submenu {
-          padding: 8px 16px;
-          background-color: #eee;
+          @include menu-default;
+          color: $primary;
+          text-transform: uppercase;
+          font-weight: 400;
+
+
+          // padding: 8px 16px;
+          // background-color: #eee;
         }
       }
       // sublist

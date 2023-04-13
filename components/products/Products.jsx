@@ -9,6 +9,7 @@ import styles from '@/styles/components/products/products.module.scss';
 
 const Products = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLeftAligned, setIsLeftAligned] = useState(true);
   
   function rotateData() {
     setCurrentIndex((currentIndex + 1) % dataProducts.length);
@@ -21,14 +22,18 @@ const Products = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
         rotateData();
-    }, 5000); // Rotate every 5 seconds
+        setIsLeftAligned(isLeftAligned => !isLeftAligned);
+    }, 5000); // Rotate every 5 seconds and change Left and Right layout.
     
     return () => clearInterval(intervalId); // Cleanup function
-  }, [currentIndex]); // useEffect triggered whenever the value of 'currentIndex' changes.
+  }, [currentIndex, dataProducts.length]); // useEffect triggered whenever the value of 'currentIndex' changes.
 
   return (
     <section className={styles.products}>
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+        style = {{flexDirection: isLeftAligned ? 'row' : 'row-reverse'}}
+      >
         <div className={styles.textContent}>
           <h4 className={styles.title}>{dataProducts[currentIndex].title}</h4>
           <p className={styles.display}>{dataProducts[currentIndex].display}</p>

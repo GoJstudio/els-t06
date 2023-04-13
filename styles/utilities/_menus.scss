@@ -25,7 +25,7 @@
     height: 100%;
     // display: inline-block; a태그에서는 사용
     border-bottom: 4px solid $primary-LTL1;
-    // transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
   }
 
   &:hover {

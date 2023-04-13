@@ -24,7 +24,7 @@ const WorkCard = ({ date, title, children }) => {
       
       <div className={stylesCard.cardText}>
         <p className={stylesCard.date}>{ date }</p>
-        <h4 className={stylesCard.title}>{ title }</h4>
+        <h6 className={stylesCard.title}>{ title }</h6>
         <div className={stylesCard.btnWrapper}>
           <button className={stylesCard.btnIcon}>
             Read more
